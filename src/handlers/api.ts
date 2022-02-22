@@ -4,7 +4,7 @@ import transform from '../utils/sharp';
 import { validateRequest } from '../utils/validation';
 import path from 'path';
 
-const apiRoutes = (app: express.Application) => {
+const apiRoutes = (app: express.Application): void => {
     app.get("/api/resize", async (req: Request, res: Response) => {
         const { error } = validateRequest(req.query);
         if (error) {
